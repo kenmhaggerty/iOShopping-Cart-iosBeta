@@ -42,7 +42,8 @@
 
 - (void)sortItemsByNameDesc {
     
-    //
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(name)) ascending:NO];
+    [self.items sortUsingDescriptors:@[sortDescriptor]];
 }
 
 - (void)sortItemsByPriceInCentsAsc {
