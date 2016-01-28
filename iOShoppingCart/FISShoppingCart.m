@@ -26,7 +26,7 @@
 
 - (void)removeItem:(FISItem *)item {
     
-    //
+    [self.items removeObjectAtIndex:[self.items indexOfObject:item]];
 }
 
 - (void)removeAllItemsLikeItem:(FISItem *)item {
