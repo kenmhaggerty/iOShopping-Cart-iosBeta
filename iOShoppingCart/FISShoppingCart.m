@@ -21,7 +21,7 @@
 
 - (void)addItem:(FISItem *)item {
     
-    //
+    [self.items addObject:item];
 }
 
 - (void)removeItem:(FISItem *)item {
