@@ -48,7 +48,8 @@
 
 - (void)sortItemsByPriceInCentsAsc {
     
-    //
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(priceInCents)) ascending:YES];
+    [self.items sortUsingDescriptors:@[sortDescriptor]];
 }
 
 - (void)sortItemsByPriceInCentsDesc {
