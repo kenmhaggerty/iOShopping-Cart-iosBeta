@@ -60,7 +60,8 @@
 
 - (NSArray *)allItemsWithName:(NSString *)name {
     
-    return nil;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", NSStringFromSelector(@selector(name)), name];
+    return [self.items filteredArrayUsingPredicate:predicate];
 }
 
 - (NSArray *)allItemsWithMinimumPriceInCents:(NSUInteger)price {
