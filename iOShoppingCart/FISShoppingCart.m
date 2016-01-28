@@ -12,7 +12,11 @@
 
 - (NSUInteger)calculateTotalPriceInCents {
     
-    return 0;
+    NSUInteger priceInCents = 0;
+    for (FISItem *item in self.items) {
+        priceInCents += item.priceInCents;
+    }
+    return priceInCents;
 }
 
 - (void)addItem:(FISItem *)item {
