@@ -66,7 +66,8 @@
 
 - (NSArray *)allItemsWithMinimumPriceInCents:(NSUInteger)price {
     
-    return nil;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K >= %i", NSStringFromSelector(@selector(priceInCents)), price];
+    return [self.items filteredArrayUsingPredicate:predicate];
 }
 
 - (NSArray *)allItemsWithMaximumPriceInCents:(NSUInteger)price {
