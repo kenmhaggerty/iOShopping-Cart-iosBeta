@@ -31,7 +31,7 @@
 
 - (void)removeAllItemsLikeItem:(FISItem *)item {
     
-    //
+    [self.items removeObject:item];
 }
 
 - (void)sortItemsByNameAsc {
